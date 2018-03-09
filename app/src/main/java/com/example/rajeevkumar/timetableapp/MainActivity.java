@@ -1,5 +1,6 @@
 package com.example.rajeevkumar.timetableapp;
 
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     public void fade(View view) {
 
         ImageView motu = (ImageView) findViewById(R.id.motu);
+        ViewCompat.animate(motu);
 
-       // motu.animate().scaleXBy(0.2f).scaleYBy(0.2f).setDuration(2000);
+
+        // motu.animate().scaleXBy(0.2f).scaleYBy(0.2f).setDuration(2000);
 
         motu.animate().translationXBy(1000f).translationYBy(1000f).rotationBy(3600).setDuration(3600);
 
